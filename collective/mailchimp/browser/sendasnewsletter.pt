@@ -15,11 +15,16 @@
 
                 <a href='#' class='ui-btn-left ui-btn-back' data-icon='arrow-l'>Back</a>
                 <div class="visualClear" />
+                <form action="@@sendasnewsletter" method="post">
+                    <div tal:repeat="list_info view/available_lists">
+                        <input type="checkbox" name="" value="" tal:attributes="value list_info/id; name list_info/id"/><span tal:content="list_info/name"/>
+                    </div>
 
-                <div tal:repeat="list view/available_lists">
-                    <div tal:content="list"/>
+                    <div>Your email address:<input type="text" name="emailaddress"/></div>
 
-                </div>
+                    <input type="submit" name="submitbutton" value="Submit!"/>
+                </form>
+
             </metal:content-core>
         </metal:main>
 

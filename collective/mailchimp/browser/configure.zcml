@@ -39,4 +39,13 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    name="sendasnewsletter"
+    for="*"
+    class=".sendasnewsletter.SendAsNewsLetterView"
+    permission="zope2.View"
+    template="sendasnewsletter.pt"
+
+    />
+
 </configure>
